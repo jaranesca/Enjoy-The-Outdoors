@@ -10,8 +10,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.5); /* White color with 50% transparency */
-    filter: blur(10px); /* Adjust the blur radius as needed */
+    background: white;
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 10px;
@@ -147,12 +146,18 @@
 }
 
 .nature {
+    background: url('bgimages/mm5.jpg') center center no-repeat;
+    background-size: cover;
+    margin: 25px 102px;
+    padding:50px 25px 375px 25px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
     text-align: center;
-    margin: 100px 0;
 }
 
 .abtnature {
-    margin-bottom: 20px; /* Adjust margin as needed */
+    margin-bottom: 40px; /* Adjust margin as needed */
 }
 
 .abtxt {
@@ -161,6 +166,30 @@
 }
 .popular{
     text-align: center;
+    margin: 100px;
+}
+
+
+.imgs-rw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    max-width: 1px;
+}
+
+.imgs-items {
+    position: relative;
+    margin: 10px;
+    text-align: center;
+}
+
+.imgs-items .slider {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    display: block;
+    border-radius: 5px;
 }
 
 /* Footer styles */
