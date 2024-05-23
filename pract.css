@@ -2,30 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
-
-#video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    object-fit: cover;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent; /* Adjust opacity as needed */
-    backdrop-filter: blur(2px); /* Adjust blur intensity as needed */
-    z-index: -1;
-}
-
 .navbar {
     position: fixed;
     top: 0;
@@ -41,7 +23,7 @@
     text-decoration: none;
     color: black;
     font-weight: bold;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .header-image {
@@ -167,10 +149,10 @@
 }
 
 .nature {
-    background: url('bgimages/mm5.jpg') center center no-repeat;
+    background: url('bgimages/s4.jpg') center center no-repeat;
     background-size: cover;
     margin: 25px 102px;
-    padding:50px 25px 375px 25px;
+    padding:30px 25px 450px 25px;
     border-radius: 5px;
     color: white;
     font-weight: 600;
@@ -178,7 +160,7 @@
 }
 
 .abtnature {
-    margin-bottom: 40px; /* Adjust margin as needed */
+    margin-bottom: 20px; /* Adjust margin as needed */
 }
 
 .abtxt {
@@ -188,7 +170,7 @@
 .popular-heading{
     text-align: center;
     margin: 100px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 .popular-section{
     margin-bottom: 50px;
@@ -216,28 +198,6 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.img-item img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.img-item .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 5px;
-}
-
 .img-item h1 {
     margin: 10px 0;
     font-size: 24px;
@@ -247,25 +207,6 @@
     margin: 10px 0;
     font-size: 16px;
     color: #333;
-}
-
-.img-item button {
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #333;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 5s ease, color 5s ease;
-}
-
-.img-item button:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-.img-item:hover .overlay {
-    opacity: 1;
 }
 
 /* Footer styles */
