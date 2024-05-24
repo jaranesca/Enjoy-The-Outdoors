@@ -27,14 +27,13 @@ function searchParksByLocation() {
     if (filteredParks.length > 0) {
         filteredParks.forEach(park => {
             let parkElement = document.createElement('div');
+            parkElement.classList.add('card', 'mb-3');
             parkElement.innerHTML = `
-                <div class="card mb-3">
-                    <img src="${park.Image}" class="card-img-top" alt="${park.LocationName}">
-                    <div class="card-body">
-                        <h5 class="card-title">${park.LocationName}</h5>
-                        <p class="card-text">${park.City}, ${park.State}</p>
-                        <a href="https://www.nps.gov/${park.LocationID.toLowerCase()}/index.htm" target="_blank" class="btn btn-primary">Visit Park</a>
-                    </div>
+                <img src="${park.Image}" class="card-img-top" alt="${park.LocationName}">
+                <div class="card-body">
+                    <h5 class="card-title">${park.LocationName}</h5>
+                    <p class="card-text">${park.City}, ${park.State}</p>
+                    <a href="https://www.nps.gov/${park.LocationID.toLowerCase()}/index.htm" target="_blank" class="btn btn-primary btn-sm">Visit Park</a>
                 </div>
             `;
             parksResults.appendChild(parkElement);
@@ -53,14 +52,13 @@ function searchParksByType() {
     if (filteredParks.length > 0) {
         filteredParks.forEach(park => {
             let parkElement = document.createElement('div');
+            parkElement.classList.add('card', 'mb-3');
             parkElement.innerHTML = `
-                <div class="card mb-3">
-                    <img src="${park.Image}" class="card-img-top" alt="${park.LocationName}">
-                    <div class="card-body">
-                        <h5 class="card-title">${park.LocationName}</h5>
-                        <p class="card-text">${park.City}, ${park.State}</p>
-                        <a href="https://www.nps.gov/${park.LocationID.toLowerCase()}/index.htm" target="_blank" class="btn btn-primary">Visit Park</a>
-                    </div>
+                <img src="${park.Image}" class="card-img-top" alt="${park.LocationName}">
+                <div class="card-body">
+                    <h5 class="card-title">${park.LocationName}</h5>
+                    <p class="card-text">${park.City}, ${park.State}</p>
+                    <a href="https://www.nps.gov/${park.LocationID.toLowerCase()}/index.htm" target="_blank" class="btn btn-primary btn-sm">Visit Park</a>
                 </div>
             `;
             parksResults.appendChild(parkElement);

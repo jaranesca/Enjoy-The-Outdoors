@@ -1,0 +1,92 @@
+.body{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+     font-weight: 400;
+     font-style: normal;
+}
+
+
+/* Buttons */
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Bootstrap primary button color */
+    color: #fff; /* Bootstrap primary button text color */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Bootstrap secondary button color */
+    color: #fff; /* Bootstrap secondary button text color */
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    filter: brightness(0.9); /* Bootstrap button hover effect */
+}
+
+.mt-4{
+    margin-top: 150px;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da; /* Bootstrap form element border color */
+    border-radius: 0.25rem;
+    background-color: #fff; /* Bootstrap form element background color */
+}
+
+/* Results */
+#parksResults {
+    margin-top: 2rem;
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: hsla(0, 0%, 100%, 0.25);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+/* Footer styles */
+footer {
+    background: rgb(18,75,95);
+    background: -moz-linear-gradient(90deg, rgba(18,75,95,1) 0%, rgba(67,131,175,1) 35%, rgba(0,212,255,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(18,75,95,1) 0%, rgba(67,131,175,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgba(18,75,95,1) 0%, rgba(67,131,175,1) 35%, rgba(0,212,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#124b5f",endColorstr="#00d4ff",GradientType=1);
+    color: black;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+}
