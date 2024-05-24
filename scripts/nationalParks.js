@@ -23,23 +23,25 @@ function searchParksByLocation() {
     const parksResults = document.getElementById('parksResults');
     parksResults.innerHTML = ''; // Clear previous results
 
-    const filteredParks = nationalParksArray.filter(park => park.State === selectedState);
-    if (filteredParks.length > 0) {
-        filteredParks.forEach(park => {
-            let parkElement = document.createElement('div');
-            parkElement.classList.add('card', 'mb-3');
-            parkElement.innerHTML = `
-                <img src="${park.Image}" class="card-img-top" alt="${park.LocationName}">
-                <div class="card-body">
-                    <h5 class="card-title">${park.LocationName}</h5>
-                    <p class="card-text">${park.City}, ${park.State}</p>
-                    <a href="https://www.nps.gov/${park.LocationID.toLowerCase()}/index.htm" target="_blank" class="btn btn-primary btn-sm">Visit Park</a>
-                </div>
-            `;
-            parksResults.appendChild(parkElement);
-        });
-    } else {
-        parksResults.innerHTML = '<p>No parks found for this location.</p>';
+    if (selectedState) {
+        const filteredParks = nationalParksArray.filter(park => park.State === selectedState);
+        if (filteredParks.length > 0) {
+            filteredParks.forEach(park => {
+                let parkElement = document.createElement('div');
+                parkElement.classList.add('card');
+                parkElement.innerHTML = `
+                    <div class="card-body">
+                        <h3 class="card-title">${park.LocationName}</h3>
+                        <p class="card-text">${park.City}, ${park.State}</p>
+                        <p class="card-text">Phone: ${park.Phone}</p>
+                        <a href="https://www.nps.gov/${park.LocationID.toLowerCase()}/index.htm" target="_blank" class="btn btn-primary btn-sm">Visit Park</a>
+                    </div>
+                `;
+                parksResults.appendChild(parkElement);
+            });
+        } else {
+            parksResults.innerHTML = '<p>No parks found for this location.</p>';
+        }
     }
 }
 
@@ -48,22 +50,24 @@ function searchParksByType() {
     const parksResults = document.getElementById('parksResults');
     parksResults.innerHTML = ''; // Clear previous results
 
-    const filteredParks = nationalParksArray.filter(park => park.LocationName.toLowerCase().includes(selectedType));
-    if (filteredParks.length > 0) {
-        filteredParks.forEach(park => {
-            let parkElement = document.createElement('div');
-            parkElement.classList.add('card', 'mb-3');
-            parkElement.innerHTML = `
-                <img src="${park.Image}" class="card-img-top" alt="${park.LocationName}">
-                <div class="card-body">
-                    <h5 class="card-title">${park.LocationName}</h5>
-                    <p class="card-text">${park.City}, ${park.State}</p>
-                    <a href="https://www.nps.gov/${park.LocationID.toLowerCase()}/index.htm" target="_blank" class="btn btn-primary btn-sm">Visit Park</a>
-                </div>
-            `;
-            parksResults.appendChild(parkElement);
-        });
-    } else {
-        parksResults.innerHTML = '<p>No parks found for this type.</p>';
+    if (selectedType) {
+        const filteredParks = nationalParksArray.filter(park => park.LocationName.toLowerCase().includes(selectedType));
+        if (filteredParks.length > 0) {
+            filteredParks.forEach(park => {
+                let parkElement = document.createElement('div');
+                parkElement.classList.add('card');
+                parkElement.innerHTML = `
+                    <div class="card-body">
+                        <h3 class="card-title">${park.LocationName}</h3>
+                        <p class="card-text">${park.City}, ${park.State}</p>
+                        <p class="card-text">Phone: ${park.Phone}</p>
+                        <a href="https://www.nps.gov/${park.LocationID.toLowerCase()}/index.htm" target="_blank" class="btn btn-primary btn-sm">Visit Park</a>
+                    </div>
+                `;
+                parksResults.appendChild(parkElement);
+            });
+        } else {
+            parksResults.innerHTML = '<p>No parks found for this type.</p>';
+        }
     }
 }

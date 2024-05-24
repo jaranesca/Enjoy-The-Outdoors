@@ -12,15 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const selectedMountain = mountainsArray.find(mountain => mountain.name === this.value);
         if (selectedMountain) {
             displayMountainInfo(selectedMountain);
+        } else {
+            clearMountainInfo();
         }
     });
-  
-    // Display info for the first mountain by default
-    if (mountainsArray.length > 0) {
-        displayMountainInfo(mountainsArray[0]);
-    }
 });
-  
+
 function displayMountainInfo(mountain) {
     const mountainInfo = document.getElementById('mountainInfo');
     mountainInfo.innerHTML = `
@@ -29,11 +26,15 @@ function displayMountainInfo(mountain) {
             <div class="card-body">
                 <h1 class="card-title">${mountain.name}</h1>
                 <p class="card-text">${mountain.desc}</p>
-                <p class="para" ><strong>Elevation:</strong> ${mountain.elevation} feet</p>
-                <p class="para"><strong>Effort:</strong> ${mountain.effort}</p>
+                <p class="para"><strong>Elevation:</strong> ${mountain.elevation} feet</p>
                 <p class="para"><strong>Effort:</strong> ${mountain.effort}</p>
                 <p class="para"><strong>Coordinates:</strong> lat: ${mountain.coords.lat}, lng: ${mountain.coords.lng}</p>
             </div>
         </div>
     `;
+}
+
+function clearMountainInfo() {
+    const mountainInfo = document.getElementById('mountainInfo');
+    mountainInfo.innerHTML = '';
 }

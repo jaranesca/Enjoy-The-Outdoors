@@ -4,50 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Parks</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/nationalParks.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lilita+One&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/nationalParks.css">
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="nav">
-        <a class="nav-item active" href="index.html">Enjoy The Outdoors</a>
-        <a class="nav-item" href="nationalpark.html">National Parks</a>
-        <a class="nav-item" href="mountains.html">Mountains</a>
+    <nav class="navbar">
+        <div class="nav">
+            <a class="nav-item" href="index.html">Enjoy The Outdoors</a>
+            <a class="nav-item active" href="nationalpark.html">National Parks</a>
+            <a class="nav-item" href="mountains.html">Mountains</a>
+        </div>
+    </nav>
+    <div class="container">
+        <main class="mt-4">
+            <div class="info-container">
+                <h1>National Parks Search</h1>
+                <div class="form-group">
+                    <label for="stateSelect">Select State/Territory</label>
+                    <select id="stateSelect" class="form-control"></select>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="parkTypeSelect">Select Park Type</label>
+                    <select id="parkTypeSelect" class="form-control"></select>
+                </div>
+                <div class="form-group mt-2">
+                    <button class="btn-primary" onclick="searchParksByLocation()">Search by Location</button>
+                    <button class="btn-secondary" onclick="searchParksByType()">Search by Park Type</button>
+                </div>
+            </div>
+            <div id="parksResults" class="mt-4"></div>
+        </main>
     </div>
-</nav>
-
-<main class="mt-4">
-    <h1>National Parks Search</h1>
-    <div class="form-group">
-        <label for="stateSelect">Select State/Territory</label>
-        <select id="stateSelect"></select>
-    </div>
-    <div class="form-group mt-2">
-        <label for="parkTypeSelect">Select Park Type</label>
-        <select id="parkTypeSelect"></select>
-    </div>
-    <div class="form-group mt-2">
-        <button class="btn-primary" onclick="searchParksByLocation()">Search by Location</button>
-        <button class="btn-secondary" onclick="searchParksByType()">Search by Park Type</button>
-    </div>
-    <div id="parksResults" class="mt-4"></div>
-</main>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 - Enjoy The Outdoors.</p>
-</footer>
-
-<script src="scripts/locationData.js"></script>
-<script src="scripts/parkTypeData.js"></script>
-<script src="scripts/nationalParkData.js"></script>
-<script src="scripts/nationalParks.js"></script>
+    <footer>
+        <p>&copy; 2024 - Enjoy The Outdoors.</p>
+    </footer>
+    <script src="scripts/locationData.js"></script>
+    <script src="scripts/parkTypeData.js"></script>
+    <script src="scripts/nationalParkData.js"></script>
+    <script src="scripts/nationalParks.js"></script>
 </body>
 </html>

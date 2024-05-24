@@ -8,8 +8,6 @@
 body {
     font-weight: 400;
     font-style: normal;
-  
-    
 }
 
 .container {
@@ -103,11 +101,12 @@ label {
     margin-bottom: 20px; /* Adjust margin as needed */
 }
 
-h1{
+h1 {
     margin-bottom: 20px;
 }
-.para{
-margin-bottom: 15px;
+
+.para {
+    margin-bottom: 15px;
 }
 
 footer {
